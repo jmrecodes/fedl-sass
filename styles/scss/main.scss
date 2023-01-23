@@ -1,0 +1,49 @@
+@use "sass:color";
+@use "sass:list";
+
+$main-fonts: Helvetica, sans-serif;
+$main-colors: #efefef, #333;
+$text-sizes: 28px, 24px, 20px, 16px, 12px;
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+html, body {
+  font-family: $main-fonts;
+  background-color: list.nth($main-colors, 1);
+  height: 100%;
+
+  a {
+    text-decoration: none;
+    color: color.scale(list.nth($main-colors, 1), $blackness: 10%);
+  }
+
+  a:hover {
+    color: list.nth($main-colors, 1);
+    text-shadow: 2px 2px 4px color.scale(list.nth($main-colors, 2), $blackness: 10%),
+                 -2px -2px 4px color.scale(list.nth($main-colors, 2), $blackness: 10%);
+  }
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: list.nth($text-sizes, 1);
+  }
+
+  > header {
+    background-color: color.scale(list.nth($main-colors, 2), $lightness: 20%);
+    height: 50px;
+
+    li {
+      line-height: 50px;
+    }
+  }
+}
