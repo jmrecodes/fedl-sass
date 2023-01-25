@@ -3,7 +3,7 @@
 
 $main-fonts: Helvetica, sans-serif;
 $main-colors: #efefef, #333;
-$text-sizes: 28px, 24px, 20px, 16px, 12px;
+$text-sizes: 3vw, 2.5vw, 2vw, 1.5vw, 1vw;
 
 @mixin clearfix() {
   &::after {
@@ -13,10 +13,60 @@ $text-sizes: 28px, 24px, 20px, 16px, 12px;
   }
 }
 
+@mixin bordered($ver: 'light', $rad: 0) {
+  @if $ver == 'light' {
+    box-shadow: 0 0 0 3px #fff,
+                0 0 0 5px list.nth($main-colors, 2);
+  }
+  @else if $ver == 'dark' {
+    box-shadow: 0 0 0 3px #fff,
+                0 0 0 5px list.nth($main-colors, 1);
+  }
+
+  @if $rad != 0 {
+    border-radius: $rad;
+  }
+}
+
+@mixin border($loc: 'all', $size: 1px, $ver: 'dark') {
+  $color: null;
+
+  @if $ver == 'light' {
+    $color: list.nth($main-colors, 1);
+  }
+  @else {
+    $color: list.nth($main-colors, 2);
+  }
+
+  @if $loc == 'all' {
+    border: $size solid $color;
+  }
+  @else if $loc == 'left' {
+    border-left: $size solid $color;
+  }
+  @else if $loc == 'top' {
+    border-top: $size solid $color;
+  }
+  @else if $loc == 'right' {
+    border-right: $size solid $color;
+  }
+  @else if $loc == 'bottom' {
+    border-bottom: $size solid $color;
+  }
+}
+
+* {
+  margin: 0;
+}
+
 html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: $main-fonts;
   background-color: list.nth($main-colors, 1);
-  height: 100%;
 
   a {
     text-decoration: none;
@@ -26,7 +76,7 @@ html, body {
   a:hover {
     color: list.nth($main-colors, 1);
     text-shadow: 2px 2px 4px color.scale(list.nth($main-colors, 2), $blackness: 10%),
-                 -2px -2px 4px color.scale(list.nth($main-colors, 2), $blackness: 10%);
+    -2px -2px 4px color.scale(list.nth($main-colors, 2), $blackness: 10%);
   }
 
   li {
@@ -38,12 +88,36 @@ html, body {
     font-size: list.nth($text-sizes, 1);
   }
 
+  p {
+    text-align: justify;
+    text-indent: 4vw;
+  }
+
   > header {
-    background-color: color.scale(list.nth($main-colors, 2), $lightness: 20%);
+    background-color: color.scale(list.nth($main-colors, 2), $blackness: 20%);
     height: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
 
     li {
       line-height: 50px;
+    }
+  }
+
+  main > section {
+    padding: 75px 0 25px 0;
+    font-size: list.nth($text-sizes, 2);
+    @include border('bottom', 2px);
+  }
+
+  aside {
+    margin: 0 auto;
+    max-width: 80%;
+
+    img {
+      background-color: color.scale(list.nth($main-colors, 2), $lightness: 30%);
+      @include bordered('light', 50%);
     }
   }
 }

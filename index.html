@@ -11,22 +11,82 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a data-id="home" href="#home">Home</a></li>
+                    <li><a data-id="projects" href="#projects">Projects</a></li>
+                    <li><a data-id="contact" href="#contact">Contact</a></li>
+                    <li><a data-id="about" href="#about">About</a></li>
                 </ul>
             </nav>
         </header>
 
         <main class="p-2">
-            <header>
-                <h1 class="text-center">Welcome to my personal site!</h1>
-            </header>
+            <section id="home">
+                <header>
+                    <h1 class="text-center">Who am I.</h1>
+                </header>
+
+                <aside class="container pb-3 pe-md-5">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-3 d-flex justify-content-center justify-content-md-end align-items-center">
+                            <a class="col-6 col-md-12" href="img/profile.png" title="jmrecodes' profile">
+                                <img class="w-100 h-100" src="img/profile.png" alt="jmrecodes' profile" />
+                            </a>
+                        </div>
+
+                        <article class="col-md-8 col-lg-9 d-flex align-items-center">
+                            <p class="mt-4 mt-md-0">Hello! I am "jmrecodes" and my real name is <strong>John Moremm L. Abuyabor</strong>. Born in the Philippines, I aspire to become a full-fledged <em>Computer Programmer</em> to be able to develop apps that can help humankind live a better life.</p>
+                        </article>
+                    </div>
+                </aside>
+            </section>
+
+            <section id="projects">
+                <header>
+                    <h1 class="text-center">Projects.</h1>
+                </header>
+
+                <article>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolores excepturi magni quisquam unde? Atque cum distinctio dolorum ducimus error illum in nisi pariatur porro quae quaerat quas quia quisquam rem, repudiandae tempore vel vero voluptates? Accusamus autem beatae eos fuga necessitatibus odio quod unde! A aliquam animi dicta excepturi harum ipsum itaque minima quia quibusdam quisquam sit suscipit veniam, voluptates! Animi aut cum ea facere, maiores nesciunt nulla odio placeat quam similique tempore temporibus, veritatis? A alias aperiam distinctio doloremque doloribus dolorum ea enim facilis id iusto minima minus, nostrum odit officia perferendis porro, provident ratione, repellendus similique tenetur!</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deserunt ea, eaque earum error
+                        esse excepturi explicabo incidunt ipsa ipsum iure molestiae odio perferendis porro, possimus
+                        quaerat soluta voluptates. Possimus!</p>
+                </article>
+            </section>
+
+            <section id="contact">
+                <header>
+                    <h1 class="text-center">Contact.</h1>
+                </header>
+
+                <article>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolores excepturi magni quisquam unde? Atque cum distinctio dolorum ducimus error illum in nisi pariatur porro quae quaerat quas quia quisquam rem, repudiandae tempore vel vero voluptates? Accusamus autem beatae eos fuga necessitatibus odio quod unde! A aliquam animi dicta excepturi harum ipsum itaque minima quia quibusdam quisquam sit suscipit veniam, voluptates! Animi aut cum ea facere, maiores nesciunt nulla odio placeat quam similique tempore temporibus, veritatis? A alias aperiam distinctio doloremque doloribus dolorum ea enim facilis id iusto minima minus, nostrum odit officia perferendis porro, provident ratione, repellendus similique tenetur!</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deserunt ea, eaque earum error
+                        esse excepturi explicabo incidunt ipsa ipsum iure molestiae odio perferendis porro, possimus
+                        quaerat soluta voluptates. Possimus!</p>
+                </article>
+            </section>
+
+            <section id="about">
+                <header>
+                    <h1 class="text-center">About.</h1>
+                </header>
+
+                <article>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolores excepturi magni quisquam unde? Atque cum distinctio dolorum ducimus error illum in nisi pariatur porro quae quaerat quas quia quisquam rem, repudiandae tempore vel vero voluptates? Accusamus autem beatae eos fuga necessitatibus odio quod unde! A aliquam animi dicta excepturi harum ipsum itaque minima quia quibusdam quisquam sit suscipit veniam, voluptates! Animi aut cum ea facere, maiores nesciunt nulla odio placeat quam similique tempore temporibus, veritatis? A alias aperiam distinctio doloremque doloribus dolorum ea enim facilis id iusto minima minus, nostrum odit officia perferendis porro, provident ratione, repellendus similique tenetur!</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deserunt ea, eaque earum error
+                        esse excepturi explicabo incidunt ipsa ipsum iure molestiae odio perferendis porro, possimus
+                        quaerat soluta voluptates. Possimus!</p>
+                </article>
+            </section>
         </main>
 
-        <footer class="text-center">
+        <footer class="text-center mb-3">
             &copy; Copyright 2023 &bullet; jmrecodes
         </footer>
+
+        <script src="js/main.js"></script>
     </body>
 </html>

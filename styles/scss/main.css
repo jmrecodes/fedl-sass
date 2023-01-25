@@ -1,29 +1,58 @@
+* {
+  margin: 0;
+}
+
 html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: Helvetica, sans-serif;
   background-color: #efefef;
-  height: 100%;
 }
-html a, body a {
+body a {
   text-decoration: none;
   color: #dbdbdb;
 }
-html a:hover, body a:hover {
+body a:hover {
   color: #efefef;
   text-shadow: 2px 2px 4px #323232, -2px -2px 4px #323232;
 }
-html li, body li {
+body li {
   list-style-type: none;
   display: inline-block;
 }
-html h1, body h1 {
-  font-size: 28px;
+body h1 {
+  font-size: 3vw;
 }
-html > header, body > header {
-  background-color: #5c5c5c;
+body p {
+  text-align: justify;
+  text-indent: 4vw;
+}
+body > header {
+  background-color: #313131;
   height: 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
-html > header li, body > header li {
+body > header li {
   line-height: 50px;
+}
+body main > section {
+  padding: 75px 0 25px 0;
+  font-size: 2.5vw;
+  border-bottom: 2px solid #333;
+}
+body aside {
+  margin: 0 auto;
+  max-width: 80%;
+}
+body aside img {
+  background-color: #707070;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #333;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=main.css.map */
