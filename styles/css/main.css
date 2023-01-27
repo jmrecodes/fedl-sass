@@ -47,6 +47,10 @@ body li {
   display: inline-block;
 }
 
+body h1 {
+  font-size: 3vw;
+}
+
 body p {
   text-align: justify;
   text-indent: 4vw;

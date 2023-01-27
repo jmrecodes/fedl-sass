@@ -55,8 +55,10 @@ $text-sizes: 3vw, 2.5vw, 2vw, 1.5vw, 1vw;
   }
 }
 
-@for $i from 1 through 5 {
-  .text-#{$i} { font-size: list.nth($text-sizes, $i); }
+$i: 1;
+@each $text-size in $text-sizes {
+  .text-#{$i} { font-size: $text-size; }
+  $i: $i + 1;
 }
 
 * {
