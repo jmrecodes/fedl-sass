@@ -65,7 +65,7 @@ body main > section {
   font-size: 2.5vw;
   border-bottom: 2px solid #333;
 }
-body aside {
+body .container, body main > section {
   margin: 0 auto;
   max-width: 80%;
 }
@@ -73,6 +73,14 @@ body aside img {
   background-color: #707070;
   box-shadow: 0 0 0 3px #fff, 0 0 0 5px #333;
   border-radius: 50%;
+}
+body aside article {
+  padding: 0;
+}
+@media (max-width: 767px) {
+  body aside.container {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

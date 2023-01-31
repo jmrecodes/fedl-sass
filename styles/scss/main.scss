@@ -72,18 +72,29 @@ body {
   }
 
   main > section {
+    @extend .container;
     padding: 75px 0 25px 0;
     font-size: list.nth($text-sizes, 2);
     @include border('bottom', 2px);
   }
 
-  aside {
+  .container {
     margin: 0 auto;
     max-width: 80%;
+  }
 
-    img {
-      background-color: color.scale(list.nth($main-colors, 2), $lightness: 30%);
-      @include bordered('light', 50%);
+  aside img {
+    background-color: color.scale(list.nth($main-colors, 2), $lightness: 30%);
+    @include bordered('light', 50%);
+  }
+
+  aside article {
+    padding: 0;
+  }
+
+  @media (max-width: 767px) {
+    aside.container {
+      max-width: 100%;
     }
   }
 }
