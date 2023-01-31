@@ -1,6 +1,8 @@
 @use "sass:color";
 @use "sass:list";
 
+@import 'border';
+
 $main-fonts: Helvetica, sans-serif;
 $main-colors: #efefef, #333;
 $text-sizes: 3vw, 2.5vw, 2vw, 1.5vw, 1vw;
@@ -10,48 +12,6 @@ $text-sizes: 3vw, 2.5vw, 2vw, 1.5vw, 1vw;
     display: block;
     clear: both;
     content: "";
-  }
-}
-
-@mixin bordered($ver: 'light', $rad: 0) {
-  @if $ver == 'light' {
-    box-shadow: 0 0 0 3px #fff,
-                0 0 0 5px list.nth($main-colors, 2);
-  }
-  @else if $ver == 'dark' {
-    box-shadow: 0 0 0 3px #fff,
-                0 0 0 5px list.nth($main-colors, 1);
-  }
-
-  @if $rad != 0 {
-    border-radius: $rad;
-  }
-}
-
-@mixin border($loc: 'all', $size: 1px, $ver: 'dark') {
-  $color: null;
-
-  @if $ver == 'light' {
-    $color: list.nth($main-colors, 1);
-  }
-  @else {
-    $color: list.nth($main-colors, 2);
-  }
-
-  @if $loc == 'all' {
-    border: $size solid $color;
-  }
-  @else if $loc == 'left' {
-    border-left: $size solid $color;
-  }
-  @else if $loc == 'top' {
-    border-top: $size solid $color;
-  }
-  @else if $loc == 'right' {
-    border-right: $size solid $color;
-  }
-  @else if $loc == 'bottom' {
-    border-bottom: $size solid $color;
   }
 }
 
