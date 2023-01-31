@@ -56,8 +56,8 @@ $text-sizes: 3vw, 2.5vw, 2vw, 1.5vw, 1vw;
 }
 
 $i: 1;
-@each $text-size in $text-sizes {
-  .text-#{$i} { font-size: $text-size; }
+@while $i <= 5 {
+  .text-#{$i} { font-size: list.nth($text-sizes, $i) }
   $i: $i + 1;
 }
 
